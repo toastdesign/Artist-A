@@ -1,4 +1,13 @@
-// mixin
+/* ==========================================================================
+// Slanted edge mixin
+// @include angle(after);
+// @include angle(after, true);
+// @include angle(before);
+// @include angle(before, true);
+// @include angle(both);
+// @include angle(both, true);
+// See https://www.viget.com/articles/angled-edges-with-css-masks-and-transforms
+========================================================================== */
 @mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
   // Possible values for $pseudo are: before, after, both
   @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
@@ -74,10 +83,25 @@
   }
 }
 
-// slanted edges here
-// @include angle(after);
-// @include angle(after, true);
-// @include angle(before);
-// @include angle(before, true);
-// @include angle(both);
-// @include angle(both, true);
+/* ==========================================================================
+Line mixin before or after
+========================================================================== */
+@mixin line($pseudo, $color: #000, $width: 100px) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: $color;
+      content: '';
+      display: block;
+      width:$width;
+      height:2px;
+      margin:rem(20) auto;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+  }
+}

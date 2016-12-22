@@ -1,0 +1,147 @@
+/* ==========================================================================
+Atoms // Helpers
+========================================================================== */
+// Font-sizes
+
+// Font colors
+.fc-white 		{color:white;}
+.fc-black 		{color:black;}
+.fc-dark-gray 	{color:black;}
+.fc-medium-gray {color:black;}
+.fc-light-gray 	{color:black;}
+
+// Font styles
+.fw-lighter 	{font-weight: lighter;}
+.fw-normal 		{font-weight: normal;}
+.fw-bold 		{font-weight: bold;}
+.fw-bolder 		{font-weight: bolder;}
+
+// Text styles
+.tt-upper 	{text-transform: uppercase;}
+.tt-lower 	{text-transform:lowercase;}
+.tt-cap 	{text-transform:capitalize;}
+
+// Background colors
+.bc-none 		{background-color:transparent;}
+.bc-black		{background-color:black;}
+.bc-white		{background-color:white;}
+.bc-primary 	{background-color:#ffd600;}
+.bc-secondary 	{}
+.bc-tertiary 	{}
+.bc-quaternary 	{}
+
+/* ==========================================================================
+Paddings
+========================================================================== */
+.p-10 		{padding:rem-calc(10);}
+.p-20 		{padding:rem-calc(20);}
+.p-30 		{padding:rem-calc(30);}
+.p-40 		{padding:rem-calc(40);}
+.p-50 		{padding:rem-calc(50);}
+.p-60 		{padding:rem-calc(60);}
+.p-70 		{padding:rem-calc(70);}
+.p-80 		{padding:rem-calc(80);}
+.p-90 		{padding:rem-calc(90);}
+.p-100 		{padding:rem-calc(100);}
+
+.ptb-10 	{padding:rem-calc(10 0);}
+.ptb-20 	{padding:rem-calc(20 0);}
+.ptb-30 	{padding:rem-calc(30 0);}
+.ptb-40 	{padding:rem-calc(40 0);}
+.ptb-50 	{padding:rem-calc(50 0);}
+.ptb-60 	{padding:rem-calc(60 0);}
+.ptb-70 	{padding:rem-calc(70 0);}
+.ptb-80 	{padding:rem-calc(80 0);}
+.ptb-90 	{padding:rem-calc(90 0);}
+.ptb-100 	{padding:rem-calc(100 0);}
+
+.pt-10 		{padding-top:rem-calc(10);}
+.pt-20 		{padding-top:rem-calc(20);}
+.pt-30 		{padding-top:rem-calc(30);}
+.pt-40 		{padding-top:rem-calc(40);}
+.pt-50 		{padding-top:rem-calc(50);}
+.pt-60 		{padding-top:rem-calc(60);}
+.pt-70 		{padding-top:rem-calc(70);}
+.pt-80 		{padding-top:rem-calc(80);}
+.pt-90 		{padding-top:rem-calc(90);}
+.pt-100 	{padding-top:rem-calc(100);}
+
+.pb-10 		{padding-bottom:rem-calc(10);}
+.pb-20 		{padding-bottom:rem-calc(20);}
+.pb-30 		{padding-bottom:rem-calc(30);}
+.pb-40 		{padding-bottom:rem-calc(40);}
+.pb-50 		{padding-bottom:rem-calc(50);}
+.pb-60 		{padding-bottom:rem-calc(60);}
+.pb-70 		{padding-bottom:rem-calc(70);}
+.pb-80 		{padding-bottom:rem-calc(80);}
+.pb-90 		{padding-bottom:rem-calc(90);}
+.pb-100 	{padding-bottom:rem-calc(100);}
+
+/* ==========================================================================
+// Margins
+========================================================================== */
+.m-10 		{margin:rem-calc(10);}
+.m-20 		{margin:rem-calc(20);}
+.m-30 		{margin:rem-calc(30);}
+.m-40 		{margin:rem-calc(40);}
+.m-50 		{margin:rem-calc(50);}
+.m-60 		{margin:rem-calc(60);}
+.m-70 		{margin:rem-calc(70);}
+.m-80 		{margin:rem-calc(80);}
+.m-90 		{margin:rem-calc(90);}
+.m-100 		{margin:rem-calc(100);}
+
+.mtb-10 	{margin:rem-calc(10 0);}
+.mtb-20 	{margin:rem-calc(20 0);}
+.mtb-30 	{margin:rem-calc(30 0);}
+.mtb-40 	{margin:rem-calc(40 0);}
+.mtb-50 	{margin:rem-calc(50 0);}
+.mtb-60 	{margin:rem-calc(60 0);}
+.mtb-70 	{margin:rem-calc(70 0);}
+.mtb-80 	{margin:rem-calc(80 0);}
+.mtb-90 	{margin:rem-calc(90 0);}
+.mtb-100 	{margin:rem-calc(100 0);}
+
+.mt-10 		{margin-top:rem-calc(10);}
+.mt-20 		{margin-top:rem-calc(20);}
+.mt-30 		{margin-top:rem-calc(30);}
+.mt-40 		{margin-top:rem-calc(40);}
+.mt-50 		{margin-top:rem-calc(50);}
+.mt-60 		{margin-top:rem-calc(60);}
+.mt-70 		{margin-top:rem-calc(70);}
+.mt-80 		{margin-top:rem-calc(80);}
+.mt-90 		{margin-top:rem-calc(90);}
+.mt-100 	{margin-top:rem-calc(100);}
+
+.mb-10 		{margin-bottom:rem-calc(10);}
+.mb-20 		{margin-bottom:rem-calc(20);}
+.mb-30 		{margin-bottom:rem-calc(30);}
+.mb-40 		{margin-bottom:rem-calc(40);}
+.mb-50 		{margin-bottom:rem-calc(50);}
+.mb-60 		{margin-bottom:rem-calc(60);}
+.mb-70 		{margin-bottom:rem-calc(70);}
+.mb-80 		{margin-bottom:rem-calc(80);}
+.mb-90 		{margin-bottom:rem-calc(90);}
+.mb-100 	{margin-bottom:rem-calc(100);}
+
+/* ==========================================================================
+// Slanted edges
+========================================================================== */
+.edge-bottom{@include angle(after);}
+.edge-bottom-reverse{@include angle(after,true);}
+.edge-top{@include angle(before);}
+.edge-top-reverse{@include angle(before,true);}
+.edge-both{@include angle(both);}
+.edge-both--reverse{@include angle(both,true);}
+
+
+/* ==========================================================================
+// Lines
+========================================================================== */
+.line-bottom{@include line(after,black, 70px);}
+.line-top{@include line(before, black, 70px);}
+.line-both{@include line(both, black, 70px);}
+
+
+
+
